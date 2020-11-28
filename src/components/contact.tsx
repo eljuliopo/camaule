@@ -73,7 +73,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
             }}
         >
             <TextInput
-                label="Name"
+                label="Nombre"
                 name="name"
                 onChange={e =>
                     updateData({
@@ -106,7 +106,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
                 }
             />
             <TextInput
-                label="Message"
+                label="Mensaje"
                 name="message"
                 type="textarea"
                 onChange={e =>
@@ -131,7 +131,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
                 <Button
                     type="button,submit"
-                    title="Send"
+                    title="Enviar"
                     disabled={transactionState}
                     iconRight={<IconRight spin={transactionState}/>}
                 />

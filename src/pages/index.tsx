@@ -31,8 +31,9 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         <Layout
             front={true}
             seo={{
-                title: "Home",
+                title: "Inicio",
                 description: siteData.description,
+                logo: siteData.logoImage,
             }}
             navPlaceholder={false}
             location={location}
@@ -81,23 +82,17 @@ const Wall = ({ data }) => {
 
     const innerComponents = (
         <React.Fragment>
-            <div className="title bg-bg">
-                <h1
-                    className={`text-6xl relative lg:text-7xl ${
-                        data.capitalizeTitleOnHome ? "uppercase" : ""
-                    }`}
-                >
-                    <span {...spanAttrs}></span>
-                    {data.title}
-                </h1>
-            </div>
-            <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">
-                {data.introTag}
-            </p>
-            <p className="text-base lg:text-lg mt-4">{data.description}</p>
+
+              <img
+                    className="lg:object-center md:object-top inset-x-0 bottom-0 md:object-scale-down inline-grid"
+                    src={data.logoImage}
+                    alt=""
+                />
+
+            <p className="text-base lg:text-lg mt-10">{data.description}</p>
             <ScrollIntoView selector="#portfolio">
                 <Button
-                    title="SEE WORKS"
+                    title="Mira nuestro trabajo"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
@@ -124,7 +119,7 @@ const Wall = ({ data }) => {
                         className="h-full w-auto max-w-none lg:h-auto lg:w-full"
                     />
                 </div>
-                <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
+                <div className="flex-1 text-center p-10 relative lg:text-center text-white lg:text-color-default">
                     {innerComponents}
                 </div>
             </div>
@@ -146,7 +141,7 @@ const About = ({ data }) => {
         <div className="boxed">
             <div className="px-4 py-20 text-center lg:py-40 lg:px-0">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    About
+                    Construir redes hoy
                 </h2>
                 <p className="mt-5 text-lg">{data}</p>
             </div>
@@ -173,7 +168,7 @@ const Contact = ({ data }) => {
         <div className="container mx-auto">
             <div className="pt-20 pb-10 lg:pt-40 lg:pb-20 text-center">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
-                    Contact
+                    Contacto
                 </h2>
             </div>
             <div className="flex flex-wrap pb-40">
@@ -202,6 +197,7 @@ export const query = graphql`
                 description
                 capitalizeTitleOnHome
                 titleImage
+                logoImage
                 ogImage
                 twoColumnWall
                 introTag

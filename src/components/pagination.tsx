@@ -5,17 +5,17 @@ import { ChevronLeft, ChevronRight } from "react-feather"
 export default function({ pageContext, type }) {
     if (pageContext.numPages > 1) {
         const listItems = Array.from({length: pageContext.numPages }).map((_,p) => <Item type={type} currentPage={pageContext.currentPage} page={p+1} key={`p-b-i-${p}`}/>)
-        
+
 
         return (
             <div className="pagination mt-8">
                 <ul className="text-center">
                     {pageContext.currentPage !== 1 && (
-                        <Item type={type} currentPage={pageContext.currentPage} page={pageContext.currentPage-1} icon={<ChevronLeft />} title="Previous Page"/>
+                        <Item type={type} currentPage={pageContext.currentPage} page={pageContext.currentPage-1} icon={<ChevronLeft />} title="Página anterior"/>
                     )}
                     {listItems}
                     {pageContext.currentPage !== pageContext.numPages && (
-                        <Item type={type} currentPage={pageContext.currentPage} page={pageContext.currentPage+1} icon={<ChevronRight />} title="Next Page"/>
+                        <Item type={type} currentPage={pageContext.currentPage} page={pageContext.currentPage+1} icon={<ChevronRight />} title="Página siguiente"/>
                     )}
                 </ul>
             </div>
@@ -31,7 +31,7 @@ const Item: React.FC<ItemProps> = ({ type, currentPage, title, page, icon }) => 
     const to = `/${type}/${(page === 1 ? "" : page)}`;
     const active = icon ? false : (page === currentPage)
 
-    const _title = title || `${type.charAt(0).toUpperCase()}${type.slice(1)} - Page ${page}`
+    const _title = title || `${type.charAt(0).toUpperCase()}${type.slice(1)} - Página ${page}`
 
     return (
         <li

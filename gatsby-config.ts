@@ -31,6 +31,13 @@ const plugins = [
         },
     },
     {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name: `integrantes`,
+            path: `${__dirname}/contents/integrantes`,
+        },
+    },
+    {
         resolve: `gatsby-plugin-mdx`,
         options: {
             gatsbyRemarkPlugins: [

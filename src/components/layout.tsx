@@ -37,11 +37,11 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
         {
             name: "theme-light",
             label: "Light Theme",
-            icon: <Sun />
+            icon: <Moon />
         },{
             name: "theme-dark",
             label: "Dark Theme",
-            icon: <Moon />
+            icon: <Sun />
         }
     ]
 

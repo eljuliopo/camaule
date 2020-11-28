@@ -39,7 +39,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 
     useEffect(() => {
         transform.current = Math.min(getWindowHeight() / 2, 300) * Math.max(0, state.percentage - percentageThreshold);
-        
+
         if(getWindowWidth() < 1024) {
             updateState({
                 animated: true
@@ -88,8 +88,8 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
                             </p>
                             <Button
                                 to={data.fields.slug}
-                                label={`View ${data.frontmatter.title}`}
-                                title={"View"}
+                                label={`Ver ${data.frontmatter.title}`}
+                                title={"Ver"}
                                 iconRight={<ArrowRight />}
                             />
                         </div>

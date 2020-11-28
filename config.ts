@@ -1,51 +1,52 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `Camaule`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
     icon: `/images/icon.png`,
     titleImage: `/images/wall.png`,
+    logoImage: `/images/logo2.png`,
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `Fundación Comunidad Artística del Maule`,
+    description: `Fundada el año 2018`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+        "Aquí su potente lema que sea como la bandera de lucha, quiza mas poetica, que tiene la fundacioms, que opinan?",
+    author: `juliopo`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
     darkmode: true,
     switchTheme: true,
     navLinks: [
         {
-            name: "HOME",
+            name: "Inicio",
             url: "/",
         },
         {
-            name: "ABOUT",
-            url: "/about",
+            name: "Bio",
+            url: "/bio",
         },
         {
-            name: "BLOG",
+            name: "Blog",
             url: "/blog",
         },
         {
-            name: "PORTFOLIO",
+            name: "Actividades",
             url: "/portfolio",
         },
         {
-            name: "CONTACT",
+            name: "Contáctanos",
             url: "/contact",
         },
     ],
     footerLinks: [
         {
-            name: "PRIVACY POLICY",
+            name: "Política de privacidad",
             url: "/privacy-policy",
         },
         {
-            name: "GitHub",
+            name: "Código original",
             url: "https://github.com/akzhy/gatsby-starter-elemental",
         },
     ],
@@ -73,11 +74,11 @@ const siteMetadata = {
     ],
     contact: {
         // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation",
+        api_url: "https://getform.io/f/a7f572ed-927e-4388-8037-143bbd007849",
+        description: `Puedes escribirnos para obtner información detallada, responderemos a la brevedad.`,
+        mail: "contacto@camaule.ml",
+        phone: "+56 9 222 22222",
+        address: "2020 \nTalca \nRegión del Maule, Chile",
     },
     disqus: "elemental-netlify-com",
 }
@@ -93,21 +94,21 @@ const beforeContactFormSubmit = data => {
     if (data.name.trim().length < 2) {
         errors.push({
             code: 1,
-            message: "Enter a name",
+            message: "Ingresa un nombre",
         })
     }
 
     if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
         errors.push({
             code: 2,
-            message: "Enter a valid email address",
+            message: "Ingresa una cuenta de correo válida",
         })
     }
 
     if (data.message.trim().length < 15) {
         errors.push({
             code: 3,
-            message: "Enter a message with atleast 15 characters",
+            message: "Ingresa un mensaje con mínimo 15 caracteres",
         })
     }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "gatsby-image";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import { MDXProvider } from "@mdx-js/react"

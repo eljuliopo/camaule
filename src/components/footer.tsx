@@ -1,5 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { Code } from 'react-feather'
+
 import { Logo } from "./utils"
 import Navlinks from "./navigation-list"
 import { FooterLinksQuery, FooterLinksQuery_site_siteMetadata_footerLinks } from "./__generated__/FooterLinksQuery"
@@ -35,16 +37,17 @@ export default function() {
                 <div className="text-color-2 my-3 footer-links animated-link-parent">
                     <Navlinks className="flex items-center justify-center flex-wrap" withThemeSwitch={false}/>
                 </div>
-                <div
-                    className="text-color-2 my-3"
-                >
-                    <ul>
-                    {footerLinks} 
-                    </ul>
-                </div>
-                <p className="text-color-default text-lg">
-                    Copyright &copy; {query.site.siteMetadata.title}{" "}
-                    {new Date().getFullYear()}
+
+                <p className="text-color-default text-sm tracking-widest">
+                    Derechos Reservados &copy; <b class="uppercase">{query.site.siteMetadata.title}{" "}
+                    {new Date().getFullYear()}</b>
+                </p>
+
+                <p className="text-color-default text-xs tracking-lg overflow-ellipsis text-opacity-85">
+            
+                  <a href="https://www.gatsbyjs.com/starters/akzhy/gatsby-starter-elemental/" target="_blank" class="strong">
+                    Sitio desarrollado gracias a este <i>starter</i> de <b>GatsbyJS</b>
+                  </a>
                 </p>
             </div>
         </footer>
