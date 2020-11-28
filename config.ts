@@ -43,7 +43,7 @@ const siteMetadata = {
     footerLinks: [
         {
             name: "Política de privacidad",
-            url: "/privacy-policy",
+            url: "/politica-privacidad",
         },
         {
             name: "Código original",
