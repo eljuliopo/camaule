@@ -44,9 +44,9 @@ export default function() {
                 </p>
 
                 <p className="text-color-default text-xs tracking-lg overflow-ellipsis text-opacity-85">
-            
+
                   <a href="https://www.gatsbyjs.com/starters/akzhy/gatsby-starter-elemental/" target="_blank" class="strong">
-                    Sitio desarrollado gracias a este <i>starter</i> de <b>GatsbyJS</b>
+                    Sitio desarrollado en base a <i>Elemental</i>, un <i>starter</i> de <b>GatsbyJS</b>
                   </a>
                 </p>
             </div>
